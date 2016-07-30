@@ -1,0 +1,29 @@
+{
+  "name": "SaavnMac",
+  "version": "0.0.1",
+  "description": "Saavn Mac App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+	"build": "electron-packager ./ --platform=darwin --arch=x64 --out=build --overwrite --icon=logo.icns"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scriptspry/saavn-mac.git"
+  },
+  "keywords": [
+    "Saavn",
+    "Mac",
+    "App"
+  ],
+  "author": "ScriptSpry",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/scriptspry/saavn-mac/issues"
+  },
+  "homepage": "http://scriptspry.com/2016/07/30/saavn-mac-app.html",
+  "devDependencies": {
+    "electron-prebuilt": "^1.2.0",
+	"open": "^0.0.5"
+  }
+}
