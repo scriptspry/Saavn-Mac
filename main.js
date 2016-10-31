@@ -111,6 +111,15 @@ function createWindow () {
     // when you should delete the corresponding element.
     mainWindow = null
   })
+
+  // hide the window instead of closing when `⌘ + W` is used
+  mainWindow.on('close', function (e) {
+    if (mainWindow.forceClose)
+      return;
+
+    e.preventDefault();
+    mainWindow.hide();
+  });
 }
 
 // This method will be called when Electron has finished
@@ -129,6 +138,14 @@ app.on('window-all-closed', function () {
   app.quit()
   // }
 })
+
+app.on('before-quit', function () {
+  mainWindow.forceClose = true;
+});
+
+app.on('activate', function () {
+  mainWindow.show();
+});
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
