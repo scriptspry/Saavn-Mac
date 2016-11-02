@@ -35,7 +35,7 @@ if (process.platform != 'darwin') {
   dialog.showMessageBox({
     "type": "error",
     "title": "Unsupported Platform",
-	"message": "Only for Mac"
+    "message": "Only for Mac"
   });
 }
 
@@ -47,16 +47,17 @@ app.commandLine.appendSwitch('ppapi-flash-path', path.join(__dirname, pluginName
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
 
-function createWindow () {
+function createWindow() {
   // Create the browser window.
   mainWindow = new BrowserWindow({
     width: 1200,
     height: 800,
-//	logo: path.join(__dirname, 'logo.png'),
+    //	logo: path.join(__dirname, 'logo.png'),
     webPreferences: {
       plugins: true,
       nodeIntegration: false
-    }})
+    }
+  })
 
   // And load saavn.com
   mainWindow.loadURL(`http://www.saavn.com/`)
@@ -70,8 +71,8 @@ function createWindow () {
   var handleUrl = function (e, url) {
     e.preventDefault()
 
-	// Opening saavn urls
-	if (url.replace('https://','').replace('http://','').indexOf('www.saavn.com') == 0)
+    // Opening saavn urls
+    if (url.replace('https://', '').replace('http://', '').indexOf('www.saavn.com') == 0)
       mainWindow.loadURL(url)
     else
       // Open External URLs in the default web browser

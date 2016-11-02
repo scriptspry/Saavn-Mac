@@ -4,8 +4,7 @@
   "description": "Saavn Mac App",
   "main": "main.js",
   "scripts": {
-    "start": "electron .",
-	"build": "electron-packager ./ --platform=darwin --arch=x64 --out=build --overwrite --icon=logo.icns"
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
@@ -24,6 +23,6 @@
   "homepage": "http://scriptspry.com/2016/07/30/saavn-mac-app.html",
   "devDependencies": {
     "electron-prebuilt": "^1.2.0",
-	"open": "^0.0.5"
+    "open": "^0.0.5"
   }
 }
