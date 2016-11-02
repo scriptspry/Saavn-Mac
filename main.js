@@ -55,12 +55,13 @@ function createWindow() {
     //	logo: path.join(__dirname, 'logo.png'),
     webPreferences: {
       plugins: true,
+      sandbox: true,
       nodeIntegration: false
     }
   })
 
   // And load saavn.com
-  mainWindow.loadURL(`http://www.saavn.com/`)
+  mainWindow.loadURL(`https://www.saavn.com/`)
 
   // Open DevTools
   // mainWindow.webContents.openDevTools()
@@ -79,7 +80,6 @@ function createWindow() {
       open(url)
   }
   webView.on('will-navigate', handleUrl)
-  webView.on('new-window', handleUrl)
 
   // Bind Media Shortcuts - This wouldn't have been required if the
   // client side code listened to these keys along with KEY_NEXT, KEY_SPACE etc.
