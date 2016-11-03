@@ -7,7 +7,28 @@ const BrowserWindow = electron.BrowserWindow
 const path = require('path')
 
 // Open external urls in default browser
-const open = require('open')
+const open = function (target, appName, callback) {
+  var opener;
+
+  if (typeof(appName) === 'function') {
+    callback = appName;
+    appName = null;
+  }
+
+  if (appName)
+    opener = 'open -a "' + escape(appName) + '"';
+  else
+    opener = 'open';
+
+  if (process.env.SUDO_USER)
+    opener = 'sudo -u ' + process.env.SUDO_USER + ' ' + opener;
+
+  return exec(opener + ' "' + escape(target) + '"', callback);
+}
+
+function escape(s) {
+  return s.replace(/"/g, '\\\"');
+}
 
 // Module to bind media shortcuts
 const globalShortcut = require('electron').globalShortcut
