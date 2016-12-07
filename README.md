@@ -4,6 +4,15 @@ Based on Electron, built for Mac OS.
 
 Download, and other info - [scriptspry.com/2016/07/30/saavn-mac-app.html](http://scriptspry.com/2016/07/30/saavn-mac-app.html).
 
+### Build
+
+```
+npm install -g electron-packager
+npm install
+make
+cp build/SaavnMac-darwin-x64/SaavnMac.app /Applications
+```
+
 # License
 
 The MIT License (MIT)
