@@ -136,10 +136,8 @@ function createWindow() {
 
   // hide the window instead of closing when `⌘ + W` is used
   mainWindow.on('close', function (e) {
-    if (mainWindow.forceClose)
-      return;
-
-    e.preventDefault();
+    if (!mainWindow.forceClose)
+      e.preventDefault();
     mainWindow.hide();
   });
 }
