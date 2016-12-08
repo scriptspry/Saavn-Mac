@@ -4,6 +4,30 @@ Based on Electron, built for Mac OS.
 
 Download, and other info - [scriptspry.com/2016/07/30/saavn-mac-app.html](http://scriptspry.com/2016/07/30/saavn-mac-app.html).
 
+## Development
+
+Run `npm run` to see all commands defined in `package.json`.
+
+#### Build Locally
+```
+npm run clean
+npm run pack
+```
+
+#### Install Locally
+Copies compiled binary to `/Applications`
+```
+npm run install
+```
+
+#### Push to S3
+Copies compressed binary to s3. Requires 7zip. Run `brew install p7zip` for the command line version.
+
+```
+npm run compress
+npm run publish
+```
+
 # License
 
 The MIT License (MIT)
