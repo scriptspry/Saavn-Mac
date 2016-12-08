@@ -27,7 +27,12 @@
   },
   "homepage": "http://scriptspry.com/2016/07/30/saavn-mac-app.html",
   "devDependencies": {
+    "devtron": "^1.4.0",
     "electron-packager": "^8.2.0",
-    "electron-prebuilt": "^1.4.5"
+    "electron-prebuilt": "^1.4.5",
+    "jshint": "^2.9.4"
+  },
+  "dependencies": {
+    "electron-debug": "^1.1.0"
   }
 }
