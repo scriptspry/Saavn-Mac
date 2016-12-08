@@ -1,5 +1,5 @@
 {
-  "name": "SaavnMac",
+  "name": "Saavn",
   "version": "0.0.2",
   "description": "Saavn Mac App",
   "main": "main.js",
@@ -7,8 +7,8 @@
     "start": "electron .",
     "clean": "rm -r build/*",
     "pack": "electron-packager ./ --platform=darwin --arch=x64 --out=build --overwrite --icon=logo.icns",
-    "compress": "cd build/SaavnMac-darwin-x64/; 7z a SaavnMac.zip SaavnMac.app",
-    "publish": "aws s3 cp build/SaavnMac-darwin-x64/SaavnMac.zip s3://scriptspry/ --profile=ss"
+    "compress": "cd build/Saavn-darwin-x64/; 7z a Saavn.zip Saavn.app",
+    "publish": "aws s3 cp build/Saavn-darwin-x64/Saavn.zip s3://scriptspry/ --profile=ss"
   },
   "repository": {
     "type": "git",
