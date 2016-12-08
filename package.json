@@ -5,9 +5,10 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "clean": "rm -r build/*",
+    "clean": "rm -rf build/*",
     "pack": "electron-packager ./ --platform=darwin --arch=x64 --out=build --overwrite --icon=logo.icns",
     "compress": "cd build/SaavnMac-darwin-x64/; 7z a SaavnMac.zip SaavnMac.app",
+    "install": "cp -r build/SaavnMac-darwin-x64/SaavnMac.app /Applications/SaavnMac.app",
     "publish": "aws s3 cp build/SaavnMac-darwin-x64/SaavnMac.zip s3://scriptspry/ --profile=ss"
   },
   "repository": {
