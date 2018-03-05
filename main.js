@@ -81,8 +81,8 @@ function createWindow() {
     }
   })
 
-  // And load saavn.com
-  mainWindow.loadURL(`https://www.saavn.com/`)
+  // And load gaana.com
+  mainWindow.loadURL(`https://www.gaana.com/`)
 
   // Open DevTools
   // mainWindow.webContents.openDevTools()
@@ -93,8 +93,8 @@ function createWindow() {
   var handleUrl = function (e, url) {
     e.preventDefault()
 
-    // Opening saavn urls
-    if (url.replace('https://', '').replace('http://', '').indexOf('www.saavn.com') == 0)
+    // Opening gaana urls
+    if (url.replace('https://', '').replace('http://', '').indexOf('www.gaana.com') == 0)
       mainWindow.loadURL(url)
     else
       // Open External URLs in the default web browser
