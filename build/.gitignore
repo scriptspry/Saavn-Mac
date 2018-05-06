@@ -1,3 +1,4 @@
 *
 
 !.gitignore
+!build/Saavn-darwin-x64/Saavn.zip

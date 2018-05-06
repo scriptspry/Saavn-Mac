@@ -8,7 +8,7 @@
     "clean": "rm -rf build/*",
     "pack": "electron-packager ./ --platform=darwin --arch=x64 --out=build --overwrite --icon=logo.icns",
     "compress": "cd build/Saavn-darwin-x64/; 7z a Saavn.zip Saavn.app",
-    "install": "cp -r build/Saavn-darwin-x64/Saavn.app /Applications/Saavn.app",
+    "install:app": "npm run clean; npm run pack; cp -r build/Saavn-darwin-x64/Saavn.app /Applications/Saavn.app",
     "publish": "aws s3 cp build/Saavn-darwin-x64/Saavn.zip s3://scriptspry/ --profile=ss"
   },
   "repository": {
