@@ -2,9 +2,9 @@
 
 Based on Electron, built for Mac OS.
 
-Download - [Saavn.zip](https://cdn.rawgit.com/scriptspry/Saavn-Mac/master/build/Saavn-darwin-x64/Saavn.zip).
+Download - [Saavn.zip](https://github.com/scriptspry/Saavn-Mac/releases/download/0.0.3/Saavn.zip).
 
-Blog post - [scriptspry.com/2016/07/30/saavn-mac-app.html](http://scriptspry.com/2016/07/30/saavn-mac-app.html).
+Blog post - [scriptspry.com/2016/07/31/saavn-mac-app.html](http://scriptspry.com/2016/07/31/saavn-mac-app.html).
 
 ## Development
 
