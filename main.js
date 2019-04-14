@@ -93,9 +93,11 @@ function createWindow() {
   var handleUrl = function (e, url) {
     e.preventDefault()
 
+    let host = url.replace(/^https?:\/\//ig, '');
+
     // Opening saavn urls
-    if (url.replace('https://', '').replace('http://', '').indexOf('www.saavn.com') == 0)
-      mainWindow.loadURL(url)
+    if (host.includes('saavn.com'))
+      mainWindow.loadURL(url);
     else
       // Open External URLs in the default web browser
       open(url)

@@ -1,6 +1,6 @@
 {
   "name": "Saavn",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Saavn Mac App",
   "main": "main.js",
   "scripts": {
@@ -8,8 +8,7 @@
     "clean": "rm -rf build/*",
     "pack": "electron-packager ./ --platform=darwin --arch=x64 --out=build --overwrite --icon=logo.icns",
     "compress": "cd build/Saavn-darwin-x64/; 7z a Saavn.zip Saavn.app",
-    "install:app": "npm run clean; npm run pack; cp -r build/Saavn-darwin-x64/Saavn.app /Applications/Saavn.app",
-    "publish": "aws s3 cp build/Saavn-darwin-x64/Saavn.zip s3://scriptspry/ --profile=ss"
+    "install:app": "npm run clean; npm run pack; cp -r build/Saavn-darwin-x64/Saavn.app /Applications/Saavn.app"
   },
   "repository": {
     "type": "git",
@@ -27,7 +26,9 @@
   },
   "homepage": "http://scriptspry.com/2016/07/30/saavn-mac-app.html",
   "devDependencies": {
-    "electron-packager": "^8.2.0",
-    "electron-prebuilt": "^1.4.5"
-  }
+    "electron": "^4.1.4",
+    "electron-packager": "^13.1.1",
+    "electron-prebuilt": "^1.4.13"
+  },
+  "dependencies": {}
 }
