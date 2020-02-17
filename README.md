@@ -1,4 +1,4 @@
-# Saavn Mac
+# JioSaavn Mac
 
 Based on Electron, built for Mac OS.
 

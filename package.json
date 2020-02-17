@@ -1,20 +1,21 @@
 {
-  "name": "Saavn",
+  "name": "JioSaavn",
   "version": "0.0.3",
-  "description": "Saavn Mac App",
+  "description": "JioSaavn Mac App",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
     "clean": "rm -rf build/*",
     "pack": "electron-packager ./ --platform=darwin --arch=x64 --out=build --overwrite --icon=logo.icns",
-    "compress": "cd build/Saavn-darwin-x64/; 7z a Saavn.zip Saavn.app",
-    "install:app": "npm run clean; npm run pack; cp -r build/Saavn-darwin-x64/Saavn.app /Applications/Saavn.app"
+    "compress": "cd build/JioSaavn-darwin-x64/; 7z a JioSaavn.zip JioSaavn.app",
+    "install:app": "npm run clean; npm run pack; cp -r build/JioSaavn-darwin-x64/JioSaavn.app /Applications/JioSaavn.app"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/scriptspry/saavn-mac.git"
   },
   "keywords": [
+    "JioSaavn",
     "Saavn",
     "Mac",
     "App"
