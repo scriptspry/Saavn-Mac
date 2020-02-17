@@ -2,7 +2,7 @@
 
 Based on Electron, built for Mac OS.
 
-Download - [JioSaavn.zip](https://github.com/scriptspry/Saavn-Mac/releases/download/0.0.4/JioSaavn.zip).
+Download - [JioSaavn.zip](https://github.com/scriptspry/Saavn-Mac/releases/download/v0.0.4/JioSaavn.zip).
 
 Blog post - [scriptspry.com/2016/07/31/saavn-mac-app.html](http://scriptspry.com/2016/07/31/saavn-mac-app.html).
 
