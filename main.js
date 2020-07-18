@@ -108,23 +108,31 @@ function createWindow() {
   // client side code listened to these keys along with KEY_NEXT, KEY_SPACE etc.
   // For now trigger functionality by remapping the keys
   globalShortcut.register('MediaPlayPause', function () {
-    webView.sendInputEvent({
-      type: 'keyDown',
-      keyCode: 'Space'
+    webView.executeJavaScript(`(() => {
+      let isPlaying = document.querySelector('.c-player__btn > .o-icon-pause') != null;
+      if (isPlaying)
+        document.querySelector('.c-player__btn > .o-icon-pause').click();
+      else
+        document.querySelector('.c-player__btn > .o-icon-play').click();
+    })();
+    `, true).catch((e) => {
+      console.error('Something went wrong', e)
     })
   })
 
   globalShortcut.register('MediaNextTrack', function () {
-    webView.sendInputEvent({
-      type: 'keyDown',
-      keyCode: 'Right'
+    webView.executeJavaScript(`
+      document.querySelector('.o-icon-next').click();
+    `, true).catch((e) => {
+      console.error('Something went wrong', e)
     })
   })
 
   globalShortcut.register('MediaPreviousTrack', function () {
-    webView.sendInputEvent({
-      type: 'keyDown',
-      keyCode: 'Left'
+    webView.executeJavaScript(`
+      document.querySelector('.o-icon-previous').click();
+    `, true).catch((e) => {
+      console.error('Something went wrong', e)
     })
   })
 

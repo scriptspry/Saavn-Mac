@@ -1,6 +1,6 @@
 {
   "name": "JioSaavn",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "JioSaavn Mac App",
   "main": "main.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "clean": "rm -rf build/*",
     "pack": "electron-packager ./ --platform=darwin --arch=x64 --out=build --overwrite --icon=logo.icns",
     "compress": "cd build/JioSaavn-darwin-x64/; 7z a JioSaavn.zip JioSaavn.app",
-    "install:app": "npm run clean; npm run pack; cp -r build/JioSaavn-darwin-x64/JioSaavn.app /Applications/JioSaavn.app"
+    "install:app": "npm run clean; npm run pack; rm -r /Applications/JioSaavn.app; cp -r build/JioSaavn-darwin-x64/JioSaavn.app /Applications/JioSaavn.app"
   },
   "repository": {
     "type": "git",
@@ -27,9 +27,8 @@
   },
   "homepage": "http://scriptspry.com/2016/07/30/saavn-mac-app.html",
   "devDependencies": {
-    "electron": "^4.1.4",
-    "electron-packager": "^13.1.1",
-    "electron-prebuilt": "^1.4.13"
+    "electron": "^9.1.0",
+    "electron-packager": "^15.0.0"
   },
   "dependencies": {}
 }
